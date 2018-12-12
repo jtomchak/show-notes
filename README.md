@@ -1,3 +1,3 @@
 # Show Notes
 
-helping create, currate, and publish show notes\*\*
+helping create, currate, and publish show notes
