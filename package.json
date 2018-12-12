@@ -9,6 +9,7 @@
     "build": "webpack --config webpack.config.js"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.2.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.4",
     "babel-preset-es2015-node": "^6.1.1",
@@ -22,5 +23,17 @@
     "typescript": "^3.2.2",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
   }
 }
