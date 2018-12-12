@@ -29,7 +29,8 @@ const commonConfig = {
 
 module.exports = Object.assign(
   {
-    entry: { main: "./src/main.ts" }
+    entry: { main: "./src/main.ts" },
+    mode: "development"
   },
   commonConfig
 );
