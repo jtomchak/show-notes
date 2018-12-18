@@ -2,6 +2,7 @@
   "extends": "tslint-config-standard",
   "rules": {
     "indent": [true, "spaces"],
+    "quotemark": [true, "double"],
     "ter-indent": [true, 2],
     "semicolon": "always",
     "space-before-function-paren": [

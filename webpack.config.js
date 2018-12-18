@@ -1,4 +1,5 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const commonConfig = {
   output: {
@@ -35,15 +36,28 @@ const commonConfig = {
       }
     ]
   },
+  node: {
+    __dirname: false
+  },
   resolve: {
     extensions: [".js", ".ts", ".json"]
   }
 };
 
-module.exports = Object.assign(
-  {
-    entry: { main: "./src/main.ts" },
-    mode: "development"
-  },
-  commonConfig
-);
+module.exports = [
+  Object.assign(
+    {
+      target: "electron-main",
+      entry: { main: "./src/main.ts" }
+    },
+    commonConfig
+  ),
+  Object.assign(
+    {
+      target: "electron-renderer",
+      entry: { gui: "./src/render.ts" },
+      plugins: [new HtmlWebpackPlugin()]
+    },
+    commonConfig
+  )
+];
