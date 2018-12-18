@@ -1,2 +1,4 @@
 node_modules/
 dist/
+TEST-jest_junit.xml
+__tests__
