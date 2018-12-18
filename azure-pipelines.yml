@@ -19,7 +19,7 @@ steps:
 
   - script: |
       npm install -g yarn
-      yarn
+      yarn install
       yarn run test
 
   - task: PublishTestResults@2
