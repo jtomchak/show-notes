@@ -1,8 +1,8 @@
-export class SimpleClass {
+class SimpleClass {
   Add(a: number, b: number): number {
     return a + b;
   }
 }
-
-const simpleClass: SimpleClass = new SimpleClass();
+export default SimpleClass;
+const simpleClass = new SimpleClass();
 console.log(simpleClass.Add(2, 3));
