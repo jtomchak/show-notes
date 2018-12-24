@@ -10,7 +10,7 @@
     "prestart": "yarn run build",
     "start": "electron ./dist/main.js",
     "pretest": "webpack --config webpack.tests.config.js",
-    "test": "jest --ci --reporters=jest-junit --reporters=default"
+    "test": "jest --ci --reporters=jest-junit --reporters=default; true"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -58,5 +58,8 @@
     "classNameTemplate": "{classname}-{title}",
     "titleTemplate": "{classname}-{title}",
     "usePathForSuiteName": "true"
+  },
+  "dependencies": {
+    "yarn": "^1.12.3"
   }
 }
